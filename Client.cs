@@ -14,7 +14,7 @@ namespace ListOfClients
         private string _patronymic;       // Отчество
         private int _serialPassport;      // Серия паспорта
         private int _numberPassport;      // Номер паспорта
-        public List<string> phoneNumber;  // Номера телефонов
+        public List<Phone> phoneNumber;  // Номера телефонов
         #endregion
 
         #region Свойства
@@ -45,7 +45,20 @@ namespace ListOfClients
         #endregion
 
         #region Конструкторы
-
+        public Client
+            (
+            string lastName, string firstName,
+            string patronymic, int serialPassport,
+            int numberPassport
+            )
+        {
+            this._lastName = lastName;
+            this._firstName = firstName;
+            this._patronymic= patronymic;
+            this._serialPassport = serialPassport;
+            this._numberPassport = numberPassport;
+            phoneNumber= new List<Phone>();
+        }
         #endregion
     }
 }
